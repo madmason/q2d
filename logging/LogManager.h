@@ -20,12 +20,10 @@ class LogManager :
     Q_OBJECT
 
 private:
-
     QMap<QString, std::shared_ptr<Logger>> m_loggers;
     QMap<QString, std::shared_ptr<LogLevel>> m_logLevels;
 
 public:
-
     LogManager(QObject* parent = nullptr);
 
     /**

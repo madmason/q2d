@@ -20,7 +20,6 @@ class Logger
     Q_OBJECT
 friend class LogManager;
 private:
-
     std::shared_ptr<LogManager> m_manager;
     QList<std::shared_ptr<LogEntry>> m_entries;
 
@@ -33,7 +32,6 @@ private:
     Logger(QString name, std::shared_ptr<LogManager> manager, QObject* parent = nullptr);
 
 public:
-
     void log(QString message, std::shared_ptr<LogLevel> severity);
     void log(QStringList messages, std::shared_ptr<LogLevel> severity);
     void log(QString message, QString severity);
